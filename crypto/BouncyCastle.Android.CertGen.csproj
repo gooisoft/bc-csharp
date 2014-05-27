@@ -33,7 +33,7 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\lib\MonoAndroid</OutputPath>
     <IntermediateOutputPath>obj\Release\lib\MonoAndroid</IntermediateOutputPath>
-    <DefineConstants>TRACE;INCLUDE_IDEA;STRONG_NAME;__MOBILE__;__ANDROID__;</DefineConstants>
+    <DefineConstants>TRACE;INCLUDE_IDEA;STRONG_NAME;__MOBILE__;__ANDROID__;CERTGENONLY</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>

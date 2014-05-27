@@ -27,7 +27,7 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\lib\MonoTouch</OutputPath>
     <IntermediateOutputPath>obj\Release\lib\MonoTouch</IntermediateOutputPath>
-    <DefineConstants>TRACE;INCLUDE_IDEA;STRONG_NAME;__MOBILE__;__IOS__;</DefineConstants>
+    <DefineConstants>TRACE;__IOS__;__MOBILE__;INCLUDE_IDEA;STRONG_NAME;__MOBILE__;__IOS__;CERTGENONLY</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>

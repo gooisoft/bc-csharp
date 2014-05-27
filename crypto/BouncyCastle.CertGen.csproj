@@ -26,7 +26,7 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\lib\net20</OutputPath>
     <IntermediateOutputPath>obj\Release\lib\net20</IntermediateOutputPath>
-    <DefineConstants>TRACE;INCLUDE_IDEA;STRONG_NAME</DefineConstants>
+    <DefineConstants>TRACE;INCLUDE_IDEA;STRONG_NAME;CERTGENONLY</DefineConstants>
     <DocumentationFile>doc\BouncyCastle.xml</DocumentationFile>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
