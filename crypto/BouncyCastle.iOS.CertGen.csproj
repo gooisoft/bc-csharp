@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0249241C-205E-4AC0-828B-90F822359B9E}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Org.BouncyCastle</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>BouncyCastle</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\lib\MonoTouch</OutputPath>
+    <IntermediateOutputPath>obj\Debug\lib\MonoTouch</IntermediateOutputPath>
+    <DefineConstants>TRACE;DEBUG;__IOS__;__MOBILE__;INCLUDE_IDEA;STRONG_NAME;__MOBILE__;__IOS__;CERTGENONLY</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\lib\MonoTouch</OutputPath>
+    <IntermediateOutputPath>obj\Release\lib\MonoTouch</IntermediateOutputPath>
+    <DefineConstants>TRACE;INCLUDE_IDEA;STRONG_NAME;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\asn1\Asn1Encodable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1EncodableVector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1Exception.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1InputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1Null.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1Object.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1OctetString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\ASN1OctetStringParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1OutputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1ParsingException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1Sequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\ASN1SequenceParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1Set.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\ASN1SetParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\ASN1StreamParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1TaggedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\ASN1TaggedObjectParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\Asn1Tags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\bc\BCObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerApplicationSpecific.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerApplicationSpecificParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerNull.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerOctetString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BEROctetStringParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerOutputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerSequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BERSequenceParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BERSetParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BerTaggedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\BERTaggedObjectParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\ConstructedOctetStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\cryptopro\CryptoProObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DefiniteLengthInputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerApplicationSpecific.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerBitString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerBMPString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerEnumerated.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DERExternal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DERExternalParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerGeneralizedTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerGeneralString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerIA5String.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerInteger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerNull.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerNumericString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerObjectIdentifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerOctetString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DEROctetStringParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerOutputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerPrintableString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerSequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DERSequenceParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DERSetParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerStringBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerT61String.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerTaggedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerUniversalString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerUTCTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerUTF8String.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\DerVisibleString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\eac\EACObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\gnu\GNUObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\iana\IANAObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\IAsn1ApplicationSpecificParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\IAsn1Choice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\IAsn1Convertible.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\IAsn1String.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\IndefiniteLengthInputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\kisa\KISAObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\LazyASN1InputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\LazyDERSequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\LazyDERSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\LimitedInputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\microsoft\MicrosoftObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\misc\CAST5CBCParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\misc\IDEACBCPar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\misc\MiscObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\misc\NetscapeCertType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\misc\NetscapeRevocationURL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\misc\VerisignCzagExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\mozilla\PublicKeyAndChallenge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\nist\NISTObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\ntt\NTTObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\OidTokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\oiw\OIWObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\CertificationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\CertificationRequestInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\ContentInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\PKCSObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\PrivateKeyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\RC2CBCParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\RSAPrivateKeyStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\RSASSAPSSparams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\pkcs\SignedData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\sec\SECObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\teletrust\TeleTrusTObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\util\Asn1Dump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\util\FilterStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x500\DirectoryString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AccessDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AlgorithmIdentifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AttCertIssuer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AttCertValidityPeriod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\Attribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AttributeCertificate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AttributeCertificateInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AttributeTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AuthorityInformationAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\AuthorityKeyIdentifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\BasicConstraints.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\CertificateList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\CertificatePair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\CertificatePolicies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\CertPolicyId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\CRLDistPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\CRLNumber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\CRLReason.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\DigestInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\DisplayText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\DistributionPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\DistributionPointName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\DSAParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\ExtendedKeyUsage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\GeneralName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\GeneralNames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\GeneralSubtree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\Holder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\IetfAttrSyntax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\IssuerSerial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\IssuingDistributionPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\KeyPurposeId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\KeyUsage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\NameConstraints.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\NoticeReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\ObjectDigestInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\PolicyInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\PolicyMappings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\PolicyQualifierId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\PolicyQualifierInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\PrivateKeyUsagePeriod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\BiometricData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\ETSIQCObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\Iso4217CurrencyCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\MonetaryValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\QCStatement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\RFC3739QCObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\SemanticsInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\qualified\TypeOfBiometricData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\ReasonFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\RoleSyntax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\RSAPublicKeyStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\sigi\NameOrPseudonym.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\sigi\PersonalData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\sigi\SigIObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\SubjectDirectoryAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\SubjectKeyIdentifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\SubjectPublicKeyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\Target.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\TargetInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\Targets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\TBSCertificateStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\TBSCertList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\Time.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\UserNotice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\V1TBSCertificateGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\V2AttributeCertificateInfoGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\V2Form.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\V2TBSCertListGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\V3TBSCertificateGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509Attributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509CertificateStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509DefaultEntryConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509Extension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509Extensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509ExtensionsGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509Name.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509NameEntryConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509NameTokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x509\X509ObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\x9\X9ObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\crypto\AsymmetricCipherKeyPair.cs" />
+    <Compile Include="src\crypto\AsymmetricKeyParameter.cs" />
+    <Compile Include="src\crypto\CryptoException.cs" />
+    <Compile Include="src\crypto\DataLengthException.cs" />
+    <Compile Include="src\crypto\digests\GeneralDigest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\engines\RSABlindedEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\engines\RSACoreEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\IAsymmetricBlockCipher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\IAsymmetricCipherKeyPairGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\ICipherParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\IDigest.cs" />
+    <Compile Include="src\crypto\ISigner.cs" />
+    <Compile Include="src\crypto\InvalidCipherTextException.cs" />
+    <Compile Include="src\crypto\KeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\MaxBytesExceededException.cs" />
+    <Compile Include="src\crypto\parameters\DsaKeyParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\parameters\DsaParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\parameters\DsaPrivateKeyParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\parameters\DsaPublicKeyParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\parameters\DsaValidationParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\parameters\KeyParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\parameters\ParametersWithIV.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\parameters\ParametersWithRandom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\prng\DigestRandomGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\digests\Sha1Digest.cs" />
+    <Compile Include="src\crypto\digests\Sha256Digest.cs" />
+    <Compile Include="src\crypto\encodings\Pkcs1Encoding.cs" />
+    <Compile Include="src\crypto\generators\RsaKeyPairGenerator.cs" />
+    <Compile Include="src\crypto\parameters\RSABlindingParameters.cs" />
+    <Compile Include="src\crypto\parameters\RsaKeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\parameters\RsaKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\RsaPrivateCrtKeyParameters.cs" />
+    <Compile Include="src\crypto\prng\IRandomGenerator.cs" />
+    <Compile Include="src\crypto\prng\ReversedWindowGenerator.cs" />
+    <Compile Include="src\crypto\prng\ThreadedSeedGenerator.cs" />
+    <Compile Include="src\crypto\signers\GenericSigner.cs" />
+    <Compile Include="src\crypto\signers\RsaDigestSigner.cs" />
+    <Compile Include="src\crypto\util\Pack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\BigInteger.cs" />
+    <Compile Include="src\math\ec\multiplier\WNafUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\security\DigestUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\security\DotNetUtilities.cs" />
+    <Compile Include="src\security\GeneralSecurityException.cs" />
+    <Compile Include="src\security\InvalidKeyException.cs" />
+    <Compile Include="src\security\InvalidParameterException.cs" />
+    <Compile Include="src\security\KeyException.cs" />
+    <Compile Include="src\security\NoSuchAlgorithmException.cs" />
+    <Compile Include="src\security\PublicKeyFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\security\SecureRandom.cs" />
+    <Compile Include="src\security\SecurityUtilityException.cs" />
+    <Compile Include="src\security\SignatureException.cs" />
+    <Compile Include="src\security\cert\CertificateEncodingException.cs" />
+    <Compile Include="src\security\cert\CertificateException.cs" />
+    <Compile Include="src\security\cert\CertificateExpiredException.cs" />
+    <Compile Include="src\security\cert\CertificateNotYetValidException.cs" />
+    <Compile Include="src\security\cert\CertificateParsingException.cs" />
+    <Compile Include="src\security\cert\CrlException.cs" />
+    <Compile Include="src\security\SignerUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\Arrays.cs" />
+    <Compile Include="src\util\BigIntegers.cs" />
+    <Compile Include="src\util\collections\CollectionUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\EmptyEnumerable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\EnumerableProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\HashSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\ISet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\UnmodifiableDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\UnmodifiableDictionaryProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\UnmodifiableList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\UnmodifiableListProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\UnmodifiableSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\collections\UnmodifiableSetProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\date\DateTimeObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\date\DateTimeUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\encoders\Hex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\encoders\HexEncoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\encoders\IEncoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\Enums.cs" />
+    <Compile Include="src\util\IMemoable.cs" />
+    <Compile Include="src\util\Integers.cs" />
+    <Compile Include="src\util\io\BaseInputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\io\PushbackStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\io\StreamOverflowException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\io\Streams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\MemoableResetException.cs" />
+    <Compile Include="src\util\net\IPAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\util\Platform.cs" />
+    <Compile Include="src\util\Strings.cs" />
+    <Compile Include="src\x509\AttributeCertificateHolder.cs" />
+    <Compile Include="src\x509\AttributeCertificateIssuer.cs" />
+    <Compile Include="src\x509\IX509AttributeCertificate.cs" />
+    <Compile Include="src\x509\IX509Extension.cs" />
+    <Compile Include="src\x509\PrincipalUtil.cs" />
+    <Compile Include="src\x509\store\IX509Selector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\x509\SubjectPublicKeyInfoFactory.cs" />
+    <Compile Include="src\x509\X509Attribute.cs" />
+    <Compile Include="src\x509\X509CertPairParser.cs" />
+    <Compile Include="src\x509\X509Certificate.cs" />
+    <Compile Include="src\x509\X509CertificatePair.cs" />
+    <Compile Include="src\x509\X509Crl.cs" />
+    <Compile Include="src\x509\X509CrlEntry.cs" />
+    <Compile Include="src\x509\X509ExtensionBase.cs" />
+    <Compile Include="src\x509\X509KeyUsage.cs" />
+    <Compile Include="src\x509\X509SignatureUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\x509\X509Utilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\x509\X509V1CertificateGenerator.cs" />
+    <Compile Include="src\x509\X509V2AttributeCertificate.cs" />
+    <Compile Include="src\x509\X509V2AttributeCertificateGenerator.cs" />
+    <Compile Include="src\x509\X509V2CRLGenerator.cs" />
+    <Compile Include="src\x509\X509V3CertificateGenerator.cs" />
+    <Compile Include="src\x509\extension\AuthorityKeyIdentifierStructure.cs" />
+    <Compile Include="src\x509\extension\SubjectKeyIdentifierStructure.cs" />
+    <Compile Include="src\x509\extension\X509ExtensionUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="checklist.txt" />
+    <None Include="Contributors.html" />
+    <None Include="License.html" />
+    <None Include="Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+</Project>

@@ -40,6 +40,7 @@ namespace Org.BouncyCastle.X509
             if (key.IsPrivate)
                 throw new ArgumentException("Private key passed - public key expected.", "key");
 
+#if !CERTGENONLY
             if (key is ElGamalPublicKeyParameters)
             {
                 ElGamalPublicKeyParameters _key = (ElGamalPublicKeyParameters)key;
@@ -53,6 +54,7 @@ namespace Org.BouncyCastle.X509
 
                 return info;
             }
+#endif
 
             if (key is DsaPublicKeyParameters)
             {
@@ -67,6 +69,7 @@ namespace Org.BouncyCastle.X509
                     new DerInteger(_key.Y));
             }
 
+#if !CERTGENONLY
             if (key is DHPublicKeyParameters)
             {
                 DHPublicKeyParameters _key = (DHPublicKeyParameters) key;
@@ -80,6 +83,7 @@ namespace Org.BouncyCastle.X509
 
                 return info;
             } // End of DH
+#endif
 
             if (key is RsaKeyParameters)
             {
@@ -92,6 +96,7 @@ namespace Org.BouncyCastle.X509
                 return info;
             } // End of RSA.
 
+#if !CERTGENONLY
             if (key is ECPublicKeyParameters)
             {
                 ECPublicKeyParameters _key = (ECPublicKeyParameters) key;
@@ -166,6 +171,7 @@ namespace Org.BouncyCastle.X509
 
                 return new SubjectPublicKeyInfo(algID, new DerOctetString(keyBytes));
             }
+#endif
 
             throw new ArgumentException("Class provided no convertible: " + key.GetType().FullName);
         }
