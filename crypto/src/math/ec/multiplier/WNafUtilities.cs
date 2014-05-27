@@ -4,6 +4,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
 {
     public abstract class WNafUtilities
     {
+#if !CERTGENONLY
         public static readonly string PRECOMP_NAME = "bc_wnaf";
 
         private static readonly int[] DEFAULT_WINDOW_SIZE_CUTOFFS = new int[]{ 13, 41, 121, 337, 897, 2305 };
@@ -267,6 +268,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
         
             return wnaf;
         }
+#endif
 
         public static int GetNafWeight(BigInteger k)
         {
@@ -279,6 +281,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
             return diff.BitCount;
         }
 
+#if !CERTGENONLY
         public static WNafPreCompInfo GetWNafPreCompInfo(ECPoint p)
         {
             return GetWNafPreCompInfo(p.Curve.GetPreCompInfo(p, PRECOMP_NAME));
@@ -465,5 +468,6 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
             Array.Copy(a, 0, result, 0, a.Length);
             return result;
         }
+#endif
     }
 }

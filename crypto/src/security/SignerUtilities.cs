@@ -358,6 +358,7 @@ namespace Org.BouncyCastle.Security
 			if (mechanism == null)
 				mechanism = algorithm;
 
+#if !CERTGENONLY
 			if (mechanism.Equals("RSA"))
 			{
 				return (new RsaDigestSigner(new NullDigest()));
@@ -374,18 +375,22 @@ namespace Org.BouncyCastle.Security
             {
                 return (new RsaDigestSigner(new MD5Digest()));
             }
+#endif
             if (mechanism.Equals("SHA-1withRSA"))
             {
                 return (new RsaDigestSigner(new Sha1Digest()));
             }
+#if !CERTGENONLY
             if (mechanism.Equals("SHA-224withRSA"))
             {
                 return (new RsaDigestSigner(new Sha224Digest()));
             }
+#endif
             if (mechanism.Equals("SHA-256withRSA"))
             {
                 return (new RsaDigestSigner(new Sha256Digest()));
             }
+#if !CERTGENONLY
             if (mechanism.Equals("SHA-384withRSA"))
             {
                 return (new RsaDigestSigner(new Sha384Digest()));
@@ -536,6 +541,7 @@ namespace Org.BouncyCastle.Security
 			{
 				return new Iso9796d2Signer(new RsaBlindedEngine(), new RipeMD160Digest(), true);
 			}
+#endif
 
 			throw new SecurityUtilityException("Signer " + algorithm + " not recognised.");
         }

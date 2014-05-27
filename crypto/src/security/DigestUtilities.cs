@@ -140,6 +140,7 @@ namespace Org.BouncyCastle.Security
 
                 switch (digestAlgorithm)
                 {
+#if !CERTGENONLY
                     case DigestAlgorithm.GOST3411:      return new Gost3411Digest();
                     case DigestAlgorithm.MD2:		    return new MD2Digest();
                     case DigestAlgorithm.MD4:		    return new MD4Digest();
@@ -148,9 +149,13 @@ namespace Org.BouncyCastle.Security
                     case DigestAlgorithm.RIPEMD160:	    return new RipeMD160Digest();
                     case DigestAlgorithm.RIPEMD256:	    return new RipeMD256Digest();
                     case DigestAlgorithm.RIPEMD320:	    return new RipeMD320Digest();
+#endif
                     case DigestAlgorithm.SHA_1:		    return new Sha1Digest();
+#if !CERTGENONLY
                     case DigestAlgorithm.SHA_224:	    return new Sha224Digest();
+#endif
                     case DigestAlgorithm.SHA_256:	    return new Sha256Digest();
+#if !CERTGENONLY
                     case DigestAlgorithm.SHA_384:	    return new Sha384Digest();
                     case DigestAlgorithm.SHA_512:	    return new Sha512Digest();
                     case DigestAlgorithm.SHA_512_224:   return new Sha512tDigest(224);
@@ -161,6 +166,7 @@ namespace Org.BouncyCastle.Security
                     case DigestAlgorithm.SHA3_512:      return new Sha3Digest(512);
                     case DigestAlgorithm.TIGER:         return new TigerDigest();
                     case DigestAlgorithm.WHIRLPOOL:     return new WhirlpoolDigest();
+#endif
                 }
             }
             catch (ArgumentException)

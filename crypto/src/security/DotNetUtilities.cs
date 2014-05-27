@@ -40,11 +40,13 @@ namespace Org.BouncyCastle.Security
 			return new SystemX509.X509Certificate(x509Cert.GetEncoded());
 		}
 
+#if !CERTGENONLY
 		public static X509Certificate FromX509Certificate(
 			SystemX509.X509Certificate x509Cert)
 		{
 			return new X509CertificateParser().ReadCertificate(x509Cert.GetRawCertData());
 		}
+#endif
 
 		public static AsymmetricCipherKeyPair GetDsaKeyPair(
 			DSA dsa)

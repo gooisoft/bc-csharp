@@ -57,6 +57,7 @@ namespace Org.BouncyCastle.Security
 
                 return new RsaKeyParameters(false, pubKey.Modulus, pubKey.PublicExponent);
             }
+#if !CERTGENONLY
             else if (algOid.Equals(X9ObjectIdentifiers.DHPublicNumber))
             {
                 Asn1Sequence seq = Asn1Sequence.GetInstance(algID.Parameters.ToAsn1Object());
@@ -112,6 +113,7 @@ namespace Org.BouncyCastle.Security
                     derY.Value,
                     new ElGamalParameters(para.P, para.G));
             }
+#endif
             else if (algOid.Equals(X9ObjectIdentifiers.IdDsa)
                 || algOid.Equals(OiwObjectIdentifiers.DsaWithSha1))
             {
@@ -127,6 +129,7 @@ namespace Org.BouncyCastle.Security
 
                 return new DsaPublicKeyParameters(derY.Value, parameters);
             }
+#if !CERTGENONLY
             else if (algOid.Equals(X9ObjectIdentifiers.IdECPublicKey))
             {
                 X962Parameters para = new X962Parameters(algID.Parameters.ToAsn1Object());
@@ -218,6 +221,7 @@ namespace Org.BouncyCastle.Security
 
                 return new Gost3410PublicKeyParameters(y, algParams.PublicKeyParamSet);
             }
+#endif
             else
             {
                 throw new SecurityUtilityException("algorithm identifier in key not recognised: " + algOid);
@@ -238,6 +242,7 @@ namespace Org.BouncyCastle.Security
             return l.Value.CompareTo(BigInteger.ValueOf(p.Value.BitLength)) <= 0;
         }
 
+#if !CERTGENONLY
         private static DHPublicKeyParameters ReadPkcsDHParam(DerObjectIdentifier algOid,
             BigInteger y, Asn1Sequence seq)
         {
@@ -249,5 +254,6 @@ namespace Org.BouncyCastle.Security
 
             return new DHPublicKeyParameters(y, dhParams, algOid);
         }
+#endif
     }
 }
