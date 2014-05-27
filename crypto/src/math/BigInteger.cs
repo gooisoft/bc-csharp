@@ -2953,7 +2953,11 @@ namespace Org.BouncyCastle.Math
                 int magPos = this.magnitude.Length - 1 - numInts;
                 for (int i = resultLength - 1; i >= 0; --i)
                 {
-                    res[i] = (int)((uint) this.magnitude[magPos--] >> numBits);
+                    // JSIL will as of 2014-05-27 not compile this if
+                    // we do a cast to uint and back to int on the same line.
+                    // Use a temporary so this code works across all platforms.
+                    uint temp = (uint)this.magnitude[magPos--];
+                    res[i] = (int)(temp >> numBits);
 
                     if (magPos >= 0)
                     {
