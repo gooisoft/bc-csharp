@@ -2,3 +2,5 @@
 **/dist
 **/obj
 crypto/doc/
+*.suo
+*.user
